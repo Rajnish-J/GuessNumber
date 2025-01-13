@@ -1,13 +1,14 @@
-import { useState } from 'react';
-import './Guess.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from "react";
+import "../main/guess.css";
 
 const Guess = () => {
-  const [secretNumber, setSecretNumber] = useState(Math.trunc(Math.random() * 20) + 1);
+  const [secretNumber, setSecretNumber] = useState(
+    Math.trunc(Math.random() * 20) + 1
+  );
   const [score, setScore] = useState(20);
   const [highscore, setHighscore] = useState(0);
-  const [message, setMessage] = useState('Start guessing...');
-  const [guess, setGuess] = useState('');
+  const [message, setMessage] = useState("Start guessing...");
+  const [guess, setGuess] = useState("");
 
   const displayMessage = (message) => setMessage(message);
 
@@ -15,20 +16,22 @@ const Guess = () => {
     const guessNumber = Number(guess);
 
     if (!guessNumber) {
-      displayMessage('⛔️ No number!');
+      displayMessage("⛔️ No number!");
     } else if (guessNumber === secretNumber) {
-      displayMessage('🎉 Correct Number!');
-      document.body.style.backgroundColor = '#60b347';
+      displayMessage("🎉 Correct Number!");
+      document.body.style.backgroundColor = "#60b347";
 
       if (score > highscore) {
         setHighscore(score);
       }
     } else if (guessNumber !== secretNumber) {
       if (score > 1) {
-        displayMessage(guessNumber > secretNumber ? '📈 Too high!' : '📉 Too low!');
+        displayMessage(
+          guessNumber > secretNumber ? "📈 Too high!" : "📉 Too low!"
+        );
         setScore(score - 1);
       } else {
-        displayMessage('💥 You lost the game!');
+        displayMessage("💥 You lost the game!");
         setScore(0);
       }
     }
@@ -37,9 +40,9 @@ const Guess = () => {
   const handleAgain = () => {
     setScore(20);
     setSecretNumber(Math.trunc(Math.random() * 20) + 1);
-    setMessage('Start guessing...');
-    setGuess('');
-    document.body.style.backgroundColor = '#222';
+    setMessage("Start guessing...");
+    setGuess("");
+    document.body.style.backgroundColor = "#222";
   };
 
   return (
@@ -47,7 +50,9 @@ const Guess = () => {
       <header className="mb-4">
         <h1 className="display-4">Guess My Number!</h1>
         <p className="between">(Between 1 and 20)</p>
-        <button className="btn btn-primary again" onClick={handleAgain}>Again!</button>
+        <button className="btn btn-primary again" onClick={handleAgain}>
+          Again!
+        </button>
         <div className="number">?</div>
       </header>
       <main className="d-flex justify-content-around">
@@ -58,12 +63,18 @@ const Guess = () => {
             value={guess}
             onChange={(e) => setGuess(e.target.value)}
           />
-          <button className="btn btn-success check" onClick={handleCheck}>Check!</button>
+          <button className="btn btn-success check" onClick={handleCheck}>
+            Check!
+          </button>
         </section>
         <section className="right text-white">
           <p className="message">{message}</p>
-          <p className="label-score">💯 Score: <span className="score">{score}</span></p>
-          <p className="label-highscore">🥇 Highscore: <span className="highscore">{highscore}</span></p>
+          <p className="label-score">
+            💯 Score: <span className="score">{score}</span>
+          </p>
+          <p className="label-highscore">
+            🥇 Highscore: <span className="highscore">{highscore}</span>
+          </p>
         </section>
       </main>
     </div>
