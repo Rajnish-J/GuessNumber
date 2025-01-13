@@ -27,21 +27,21 @@
 ## Installation and Setup
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/guess-my-number-game.git
-    ```
+   ```bash
+   git clone https://github.com/yourusername/guess-my-number-game.git
+   ```
 2. Navigate to the project directory:
-    ```bash
-    cd guess-my-number-game
-    ```
+   ```bash
+   cd guess-my-number-game
+   ```
 3. Install the dependencies:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 4. Start the development server:
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 5. Open your browser and go to `http://localhost:3000` to play the game.
 
 ## How to Play
@@ -57,11 +57,12 @@
 
 ## Screenshots
 
-![Screenshot of the Game](./src/assets/screenshots/s1.png)
-![Screenshot after winning the Game](./src/assets/screenshots/s2.png)
+![Screenshot of the Base Game](./src/assets/screenshots/BaseGame.png)
+![Screenshot after winning the Game](./src/assets/screenshots/WinGame.png)
+![Screenshot after winning the Game in the First try](./src/assets/screenshots/firstTry.png)
+![Screenshot after winning the Game](./src/assets/screenshots/LostGame.png)
 
 ## Acknowledgments
 
 - Inspired by the "Guess My Number" game built using vanilla JavaScript.
 - Font used: "Press Start 2P" from Google Fonts.
-
