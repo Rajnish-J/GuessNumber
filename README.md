@@ -55,6 +55,11 @@
 5. Click the "Again!" button to reset the game and play again.
 6. Try to set a new high score by guessing correctly with the fewest attempts.
 
+## Screenshots
+
+![Screenshot of the Game](./src/assets/screenshots/s1.png)
+![Screenshot after winning the Game](./src/assets/screenshots/s2.png)
+
 ## Acknowledgments
 
 - Inspired by the "Guess My Number" game built using vanilla JavaScript.
